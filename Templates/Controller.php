@@ -3,8 +3,8 @@
 namespace {namespace}\Controllers;
 
 
-use App\Models\{! nameModel !};
 use CodeIgniter\Controller;
+use {namespace}\Models\{! nameModel !};
 use {namespace}\Entities\{! nameEntity !} as {! nameEntity !}Entity;
 
 class {! nameController !} extends Controller
@@ -21,7 +21,7 @@ class {! nameController !} extends Controller
         $data = array(
             'rows' => $this->model->findAll(),
         );
-        return view('{! table !}',$data);
+        return view('{namespace}/Views/{! table !}',$data);
     }
 
     public function delete(${! primaryKey !}){

@@ -9,5 +9,11 @@ class {! nameModel !} extends Model
     protected $allowedFields = [{! allowedFields !}];
     protected $returnType    = '{! returnType !}';
 
+    protected $useTimestamps = true;
+    protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
 
+    protected $validationRules    = [];
+    protected $validationMessages = [];
+    protected $skipValidation     = false;
 }
