@@ -252,13 +252,13 @@ trait Generate
     public function createRoute($data){
         $route_file = file_get_contents(APPPATH.'Config/Routes.php');
 
-        $data_to_write = $route_file."\n".'$routes->add(\'/'.$data['table'].'\',\''.$data['nameController'].'::index\');';
+        $data_to_write = $route_file."\n".'$routes->get(\''.$data['table'].'\',\''.$data['nameController'].'::index\');';
         $data_to_write.="\n";
-        $data_to_write.='$routes->add(\'/'.$data['table'].'/delete/(:segment)\',\''.$data['nameController'].'::delete/$1\');';
+        $data_to_write.='$routes->get(\''.$data['table'].'/delete/(:segment)\',\''.$data['nameController'].'::delete/$1\');';
         $data_to_write.="\n";
-        $data_to_write.='$routes->add(\'/'.$data['table'].'/save\',\''.$data['nameController'].'::save\');';
+        $data_to_write.='$routes->post(\''.$data['table'].'/save\',\''.$data['nameController'].'::save\');';
         $data_to_write.="\n";
-        $data_to_write.='$routes->add(\'/'.$data['table'].'/edit/(:segment)\',\''.$data['nameController'].'::edit_ajax/$1\');';
+        $data_to_write.='$routes->get(\''.$data['table'].'/edit/(:segment)\',\''.$data['nameController'].'::edit_ajax/$1\');';
         $data_to_write.="\n";
 
 
