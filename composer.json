@@ -1,6 +1,6 @@
 {
-    "name": "cjam/fastcode-ci",
-    "description": "CLI tools for CodeIgniter 4",
+    "name": "koulaw/fastcode-ci",
+    "description": "CLI tools for CodeIgniter 4. This is a fork project created by cjam.",
     "license": "MIT",
     "type": "codeigniter-command"
     
